@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Dulce Vida - Pastelería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .menu, .about, .contact, .map {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Dulce Vida</h1>
+    <nav>
+        <a href="#menu">Menú</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#contact">Contacto</a>
+        <a href="#map">Ubicación</a>
+    </nav>
+</header>
+
+<section id="menu" class="menu">
+    <h2>Nuestro Menú</h2>
+    <ul>
+        <li>Tortas Personalizadas</li>
+        <li>Pasteles de Chocolate</li>
+        <li>Galletas Variadas</li>
+        <li>Pasteles de Frutas</li>
+        <li>Pan de Banano</li>
+        <li>Brownies Caseros</li>
+    </ul>
+</section>
+
+<section id="about" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>En La Dulce Vida, nos apasiona la pastelería. Utilizamos ingredientes frescos y de alta calidad para crear delicias que endulzan cualquier ocasión. Desde tortas personalizadas para cumpleaños hasta galletas que hacen sonreír, cada producto es elaborado con amor.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<section id="map" class="map">
+    <h2>Nuestra Ubicación</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508424!2d144.95373631531874!3d-37.81720997975183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0e7a6b93%3A0x5045675218ce6e0!2sLa%20Dulce%20Vida%20Pasteler%C3%ADa!5e0!3m2!1ses!2sus!4v1615651343074!5m2!1ses!2sus" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<footer>
+    <p>&copy; 2024 La Dulce Vida. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

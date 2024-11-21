@@ -1,0 +1,65 @@
+h2{
+	margin-top: 200px;
+}
+
+.botonTituloSeccion{
+	/* color de fondo de contenedor*/
+	background-color: rgba(226,200, 170, 0.1);
+	
+	color: rgba(108, 108, 108, 1.0);
+	/* tipo de cursor  */
+	cursor: pointer;
+	/*se utiliza para agregar espacio adicional dentro de un elemento HTML*/
+	padding: 18px;
+	/*tamaño del boton */
+	width: 100%;
+	/*se utiliza para dar borde y color a un elemento como div ,imagen*/ 
+	border: 3px solid rgba(255, 250, 230, 1.0);
+	/* permite colocar el texto de diferentes maneras , en el centro es el caso */
+	text-align: center;
+	/*elimina el contorno alrededor de un elemento al recibir en efoque*/
+	outline: none;
+	
+	font-size: 30px;
+	/* al darle un valor a la propiedad transition permite el tiempo que dura */
+	transition: 0.3s;
+}
+.botonTituloSeccion:hover, .active{
+	/*esto hace que cuando pasemos el cursor sobre nuestras opciones(Seccion 1,2,3) cambie de color  */
+	background-color: rgba(220,140,170, 0.3);
+	}
+.contenidoSeccion{
+	/* se utiliza para establecer el espacio entre el borde superiordel elemento y su contenido interno */
+	padding-top: 10px;
+	/*establece el color el color de fondo de un elemento*/
+	background-color: rgba(250, 210, 220, 1.0);
+	/*se utiliza para ocultar el contenido que sobrepasa el tamaño*/
+	overflow: hidden;
+	/*el espacio entre las palabras se ajusta automaticamente para que el ancho del texto se adapte al ancho ddel contenedor*/
+	text-align: justify;
+	/*se usa definir el ancho maximo de un elemento */
+	max-width: 79%;
+	/*se utiliza para establecer el tamaño del margen izquierdo de un elemento*/
+	margin-left: 10%;
+    /*donde va el texto*/
+    display: none;
+    /*se utiliza para definir el espaciado interno a la izquierda de un elemento*/
+    padding-left: 10px;
+    /*se utiliza para definir el espaciado interno a la derecha de un elemento*/
+    padding-right: 10px;
+}
+/* organiza y estiliza los elementos en un sitio web  */
+.contenedor{
+	margin-top: 60px;
+    
+
+
+	/*se usa definir el ancho maximo de un elemento */
+	
+	max-width: 70%;
+	/*se utiliza para establecer el tamaño del margen izquierdo de un elemento , se puede controlar la distanciaentre el elemento y espacio que se encuentra el borde izquierdo*/
+	margin-left: 15%;
+	/*establece el color el color de fondo de un elemento*/
+	background-color: rgba(255, 182, 193, 0.6);
+}
+    	

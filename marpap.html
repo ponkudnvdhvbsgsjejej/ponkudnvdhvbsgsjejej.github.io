@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .carrusel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .carrusel-imagenes {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carrusel-imagenes img {
+            width: 100%; /* Ajusta la imagen al ancho del contenedor */
+            height: 400px; /* Fija la altura deseada para todas las imágenes */
+            object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carrusel">
+    <div class="carrusel-imagenes">
+        <img src="1.jpg" alt="Imagen 1">
+        <img src="2.jpg" alt="Imagen 2">
+        <img src="4.jpg" alt="Imagen 4">
+         <img src="5.PNG" alt="Imagen 5">
+         <img src="6.PNG" alt="Imagen 6">
+    </div>
+    <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+    <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+</div>
+
+<script>
+    let indice = 0;
+
+    function mostrarImagen(indice) {
+        const imagenes = document.querySelector('.carrusel-imagenes');
+        const totalImagenes = imagenes.children.length;
+        
+        if (indice >= totalImagenes) {
+            indice = 0;
+        } else if (indice < 0) {
+            indice = totalImagenes - 1;
+        }
+        
+        imagenes.style.transform = 'translateX(' + (-indice * 100) + '%)';
+        return indice;
+    }
+
+    function cambiarImagen(direccion) {
+        indice += direccion;
+        indice = mostrarImagen(indice);
+    }
+
+    // Mostrar la primera imagen al cargar
+    mostrarImagen(indice);
+
+    // Cambiar de imagen automáticamente cada 3 segundos
+    setInterval(() => {
+        indice++;
+        mostrarImagen(indice);
+    }, 3000);
+</script>
+
+</body>
+</html>

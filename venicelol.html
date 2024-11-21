@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Dulce Tentación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 2em;
+            text-align: center;
+        }
+        .product {
+            display: inline-block;
+            margin: 1em;
+            padding: 1em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Dulce Tentación</h1>
+    <p>Los mejores pasteles y dulces en la ciudad</p>
+</header>
+
+<nav>
+    <a href="#home">Inicio</a>
+    <a href="#about">Nosotros</a>
+    <a href="#products">Productos</a>
+    <a href="#contact">Contacto</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Bienvenidos a La Dulce Tentación</h2>
+    <p>¡Descubre nuestros deliciosos pasteles y dulces caseros!</p>
+</div>
+
+<div class="container fade-in" id="products">
+    <h2>Nuestros Productos</h2>
+    <div class="product">
+        <h3>Pastel de Chocolate</h3>
+        <p>Un delicioso pastel de chocolate hecho con los mejores ingredientes.</p>
+    </div>
+    <div class="product">
+        <h3>Tarta de Fresas</h3>
+        <p>Una fresca tarta de fresas perfecta para cualquier ocasión.</p>
+    </div>
+</div>
+
+<div class="container" id="about">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos una pastelería con más de 20 años de experiencia, dedicada a crear los mejores pasteles y dulces para nuestros clientes.</p>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contáctanos</h2>
+    <p>Email: contacto@ladulcetentacion.com</p>
+    <p>Teléfono: +52 123 456 7890</p>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 La Dulce Tentación. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeIns = document.querySelectorAll('.fade-in');
+        window.addEventListener('scroll', function() {
+            fadeIns.forEach(function(fadeIn) {
+                const rect = fadeIn.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    fadeIn.classList.add('visible');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
